@@ -7,6 +7,7 @@ html{
     line-height: 1.6;
     margin: 0;
 }
+
 h1{
     margin-bottom: 0px;
  font-size: 90px;
@@ -49,21 +50,19 @@ p{
   font-weight: weight;
   font-style: normal;
 }
-.A p{
-    font-size: 20px;
-}
+
 .img img{
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    display: block;
     border: 2px solid #3A59D1;
     float: left;
-    margin-left: 60px
-    
+
+   
 }
 .img p{
 text-align:center;
+
 }
 li{
     font-size: 25px;
@@ -73,48 +72,113 @@ li{
   font-weight: weight;
   font-style: normal;
 }
-.ss{
-    border-radius: 5%;
-    margin-top: 0px;
-    margin-left: 0px;
-    margin-right: 40px;
-    
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 800px;
+  gap: 20px;
 }
-.A{
-display: inline-block;
+
+.section .image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
 }
+
+.section .text {
+  flex: 1;
+  font-size: 1.5rem;
+  color: #3D90D7;
+  text-align: left;
+  font-family: "Caveat", cursive;
+}
+
 
 
 
 @media (max-width: 600px) {
+    .img{
+        display: flex;
+        text-align: bottom;
+        flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 800px;
+  gap: 0px;}
+    .img img {
+        margin-left: 50%;
+        justify-items: center;
+        margin-bottom: 20px;
+    }
+    
     h1 {
         font-size:2rem;
+        margin-bottom: 20px;
     }
     h2 {
         font-size: 1.5rem;
+        text-align: center;
     }
     p{
-        font-size: 1rem;
+       text-align: center;
+        font-size: 1.3rem;
     }
     li{
         font-size: 1rem;
+        text-align: center;
     }
     img{
-    float: none;
-    margin-left: 30%;
-    margin-right: 50%;
+      display: grid;
+    place-items: center;
+        margin-right: 50%;
+      
+   
 }
-.ss{
-        margin-left: 40px;
+.section {
+    flex-direction: column;
+    text-align: center;
+  }
 
-}
-.A p{
+  .section .text {
     text-align: center;
     font-size: 1.2rem;
-}
+  }
+
+  .section .image img {
+    width: 120px;
+    height: 120px;
+  }
+
 .img p{
     text-align: center;
 }
     
     
+}
+
+@media (min-width: 601px) {
+
+    .img img{
+        margin-left: 10%;
+    }
+
+    .section{
+        margin-left: 5%;
+        display: inline-block;
+    }
+    .section p {
+        font-size: 1.5rem;
+    }
+    .A{
+        display: inline-block;
+        margin-left: 5%;
+    }
+    .b{
+        text-align: center;
+    }
 }
